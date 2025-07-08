@@ -1,7 +1,11 @@
 import { css } from '@emotion/react';
 
-const Button = () => {
-  return <button css={buttonStyle}>Click Me</button>;
+interface ButtonProps {
+  label: string;
+}
+
+const Button = ({ label }: ButtonProps) => {
+  return <button css={buttonStyle}>{label}</button>;
 };
 
 export default Button;
